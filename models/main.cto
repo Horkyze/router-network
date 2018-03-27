@@ -1,0 +1,24 @@
+namespace sk.fiit.routernetwork
+
+asset Config identified by configId {
+  o String configId
+  o String data
+}
+
+participant Admin identified by adminId {
+  o String adminId
+  o String name
+}
+
+participant Editor identified by editorId {
+  o String editorId
+  o String name
+}
+
+participant Viewer identified by viewerId {
+  o String viewerId
+  o String name
+  --> Config config
+}
+
+
